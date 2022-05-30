@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>zen-button</title>
+	<meta name="robots" content="none">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<style type="text/css">
+        html {
+            font-family: system-ui, -apple-system, "Open Sans", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-feature-settings: "kern" 1,"liga" 0;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        * {
+            outline: none;
+            text-size-adjust: none;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        html,
+        body,
+        input,
+        textarea,
+        button {
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        .layout {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+		ul {
+			list-style: none;
+			margin: 0;
+            padding: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/zen-toggle.min.css">
+</head>
+<body class="@@body-class">
+<div id="app" class="layout">
+	<main role="main" class="main">
+		<ul>
+			<li>
+				<div class="toggle">
+					<input id="c1" type="checkbox">
+					<label for="c1">Checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="c2" type="checkbox" checked>
+					<label for="c2">
+						<span>Checkbox</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="r1" type="radio" name="rt" value="1">
+					<label for="r1">Radio</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="r2" type="radio" name="rt" value="1" checked>
+					<label for="r2">Radio</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="s1" type="checkbox" class="switch">
+					<label for="s1">Switch checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="s2" type="checkbox" class="switch" checked>
+					<label for="s2">Switch checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="s1r" type="radio" name="rs" value="3" class="switch">
+					<label for="s1r">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="s2r" type="radio" name="rs" value="3" class="switch" checked>
+					<label for="s2r">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+		</ul>
+	</main>
+</div>
+<script src="js/zen-toggle.min.js"></script>
+</body>
+</html>
