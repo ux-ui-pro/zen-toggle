@@ -6,7 +6,7 @@
 
 <h1>zen-toggle</h1>
 
-[![npm](https://img.shields.io/npm/v/zen-toggle.svg?colorB=brightgreen)](https://www.npmjs.com/package/zen-button)
+[![npm](https://img.shields.io/npm/v/zen-toggle.svg?colorB=brightgreen)](https://www.npmjs.com/package/zen-toggle)
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/zen-toggle.svg)](https://github.com/ux-ui-pro/zen-toggle)
 
 <img alt="zen-toggle" src="./images/looks.webp" width="240" width="410">
