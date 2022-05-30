@@ -165,12 +165,11 @@
 
                 &::after {
                     width: 1rem; height: 1rem;
-                    transform: scale(0);
                     background: var(--color-base);
                     border-radius: 5rem;
-                    transition: opacity 90ms var(--t-smooth),
-                                transform 90ms var(--t-smooth);
-                    will-change: opacity, transform;
+                    transform: scale(0);
+                    transition: transform 90ms var(--t-smooth);
+                    will-change: transform;
                 }
 
                 &:checked {

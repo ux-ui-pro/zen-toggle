@@ -11,8 +11,6 @@
 
 </div>
 
-### install
-
 #### SCSS
 ```SCSS
 @import "node_modules/zen-toggle/src/scss/zen-toggle";
