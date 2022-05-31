@@ -30,11 +30,9 @@ import helpers from "zen-toggle"
 
 <div align="center">
 
-<br><br>
+<br>
 
 <img alt="zen-toggle" src="./images/looks.webp" width="450" width="370">
-
-<br>
 
 </div>
 
