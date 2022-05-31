@@ -32,7 +32,7 @@ import helpers from "zen-toggle"
 
 <br>
 
-<img alt="zen-toggle" src="./images/looks.webp" width="240" width="410">
+<img alt="zen-toggle" src="./images/looks.webp" width="450" width="370">
 
 </div>
 
