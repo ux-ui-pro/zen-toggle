@@ -1,4 +1,4 @@
-export default function rippleToggle() {
+export default function helpers() {
     const forFocus = document.querySelectorAll('.toggle input[type="checkbox"], .toggle input[type="radio"]')
 
     if (forFocus) {
@@ -12,7 +12,6 @@ export default function rippleToggle() {
 
             el.setAttribute('tabindex', '-1')
 
-
             toggles.addEventListener('click', function () {
                 el.classList.add('toggle--ripple')
 
@@ -20,7 +19,6 @@ export default function rippleToggle() {
                     el.classList.remove('toggle--ripple')
                 }, 225)
             })
-
 
         })
     }

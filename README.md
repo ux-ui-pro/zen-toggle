@@ -18,7 +18,7 @@
 
 #### JS
 ```javascript
-import rippleToggle from "zen-toggle"
+import helpers from "zen-toggle"
 ```
 
 #### Hosting files

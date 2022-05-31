@@ -1,5 +1,5 @@
-import rippleToggle from "./modules/ripple-toggle.js"
+import helpers from "./modules/helpers.js"
 
-rippleToggle()
+helpers()
 
 
