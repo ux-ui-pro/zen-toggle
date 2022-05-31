@@ -11,6 +11,13 @@
 
 </div>
 
+#### Hosting files
+```HTML
+<link rel="stylesheet" href="path-to-the-file/zen-toggle.min.css">
+
+<script src="path-to-the-file/zen-toggle.min.js"></script>
+```
+
 #### SCSS
 ```SCSS
 @import "node_modules/zen-toggle/src/scss/zen-toggle";
@@ -19,13 +26,6 @@
 #### JS
 ```javascript
 import helpers from "zen-toggle"
-```
-
-#### Hosting files
-```HTML
-<link rel="stylesheet" href="path-to-the-file/zen-toggle.min.css">
-
-<script src="path-to-the-file/zen-toggle.min.js"></script>
 ```
 
 <div align="center">
