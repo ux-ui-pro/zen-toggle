@@ -7,14 +7,16 @@
         --color-base: hsla(var(--color-base-h) var(--color-base-s) var(--color-base-l) / var(--color-base-a));
         --highlight-checked: hsla(var(--color-base-h) var(--color-base-s) var(--color-base-l) / .12);
         --highlight-unchecked: hsla(var(--color-base-h) 0% 50% / .12);
+        --color-disabled: hsla(var(--color-base-h) 0% 78% / var(--color-base-a));
 
-        --t-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-        --t-ripple: cubic-bezier(0.14, 0, 0, 1);
+        --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-ripple: cubic-bezier(0.14, 0, 0, 1);
 
         --font-size-label: 1.5rem;
         --font-size-append: 1.2rem;
         --font-color-label: Black;
         --font-color-append: Gray;
+        --font-color-disabled: DarkGray;
 
         position: relative;
         display: inline-flex;
@@ -42,6 +44,16 @@
                 font-size: var(--font-size-append);
                 line-height: 125%;
                 color: var(--font-color-append);
+            }
+        }
+
+        input:disabled + label,
+        &.toggle--disabled label {
+            pointer-events: none;
+            color: var(--font-color-disabled);
+
+            span + span {
+                color: var(--font-color-disabled);
             }
         }
 
@@ -102,8 +114,8 @@
                     border-radius: 5rem;
                     transform: translateX(-1rem);
                     transition: background 90ms ease,
-                    transform 90ms var(--t-smooth),
-                    box-shadow 90ms var(--t-smooth);
+                    transform 90ms var(--transition-smooth),
+                    box-shadow 90ms var(--transition-smooth);
                     will-change: background, transform, box-shadow;
                 }
 
@@ -119,6 +131,18 @@
                         transform: translateX(1rem);
                     }
                 }
+
+                &:disabled {
+                    &::before {
+                        --color-base-s: 0%;
+                        --color-base-l: 90%;
+                    }
+
+                    &::after {
+                        --color-base-s: 0%;
+                        --color-base-l: 80%;
+                    }
+                }
             }
         }
 
@@ -128,7 +152,7 @@
                     width: 1.8rem; height: 1.8rem;
                     border-radius: .2rem;
                     background: transparent;
-                    transition: background 90ms var(--t-smooth);
+                    transition: background 90ms var(--transition-smooth);
                     will-change: background;
                 }
 
@@ -139,7 +163,7 @@
                     mask-position: center center;
                     background: White;
                     opacity: 0;
-                    transition: opacity 90ms var(--t-smooth);
+                    transition: opacity 90ms var(--transition-smooth);
                     will-change: opacity;
                 }
 
@@ -151,6 +175,18 @@
 
                     &::after {
                         opacity: 1;
+                    }
+                }
+
+                &:disabled {
+                    &::before {
+                        border-color: var(--color-disabled);
+                    }
+
+                    &:checked {
+                        &::before {
+                            background: var(--color-disabled);
+                        }
                     }
                 }
             }
@@ -168,13 +204,23 @@
                     background: var(--color-base);
                     border-radius: 5rem;
                     transform: scale(0);
-                    transition: transform 90ms var(--t-smooth);
+                    transition: transform 90ms var(--transition-smooth);
                     will-change: transform;
                 }
 
                 &:checked {
                     &::after {
                         transform: scale(1);
+                    }
+                }
+
+                &:disabled {
+                    &::before {
+                        border-color: var(--color-disabled);
+                    }
+
+                    &::after {
+                        background: var(--color-disabled);
                     }
                 }
             }
@@ -197,13 +243,13 @@
         &--ripple {
             input:not(.switch)::before,
             input.switch::after {
-                animation: toggle-ripple-unchecked 225ms var(--t-ripple) 1;
+                animation: toggle-ripple-unchecked 225ms var(--transition-ripple) 1;
                 animation-play-state: running;
             }
 
             input:not(.switch):checked::before,
             input.switch:checked::after {
-                animation: toggle-ripple-checked 225ms var(--t-ripple) 1;
+                animation: toggle-ripple-checked 225ms var(--transition-ripple) 1;
                 animation-play-state: running;
             }
         }

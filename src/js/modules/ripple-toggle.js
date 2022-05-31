@@ -5,7 +5,13 @@ export default function rippleToggle() {
         forFocus.forEach((toggles) => {
 
             let el = toggles.parentElement
+
+            if(toggles.disabled) {
+                el.classList.add('toggle--disabled')
+            }
+
             el.setAttribute('tabindex', '-1')
+
 
             toggles.addEventListener('click', function () {
                 el.classList.add('toggle--ripple')
@@ -14,6 +20,8 @@ export default function rippleToggle() {
                     el.classList.remove('toggle--ripple')
                 }, 225)
             })
+
+
         })
     }
 }
