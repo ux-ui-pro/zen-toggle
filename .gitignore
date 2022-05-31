@@ -5,5 +5,3 @@ Thumbs.db
 gulpfile.js
 package-lock.json
 memo.md
-*.txt
-*.log
