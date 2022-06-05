@@ -1,7 +1,7 @@
 {
   "name": "zen-toggle",
-  "version": "2.0.2",
-  "description": "Toggle component, simple to use and highly customizable",
+  "version": "3.0.0",
+  "description": "Checkbox, radio, switch, material",
   "author": "ux-ui.pro",
   "license": "MIT",
   "repository": {
@@ -12,7 +12,7 @@
     "dist",
     "src"
   ],
-  "main": "src/js/modules/helpers.js",
+  "main": "src/js/modules/toggle-helper.js",
   "bugs": {
     "url": "https://github.com/ux-ui-pro/zen-toggle/issues"
   },

@@ -9,6 +9,10 @@
 [![npm](https://img.shields.io/npm/v/zen-toggle.svg?colorB=brightgreen)](https://www.npmjs.com/package/zen-toggle)
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/zen-toggle.svg)](https://github.com/ux-ui-pro/zen-toggle)
 
+<p>
+  <a href="https://ux-ui-pro.github.io/zen-toggle/dist/">Demo</a>
+</p>
+
 </div>
 
 #### Hosting files
@@ -25,14 +29,24 @@
 
 #### JS
 ```javascript
-import helpers from "zen-toggle"
+import toggleHelper from "zen-toggle"
+```
+
+#### Set the base color (HSLA)
+```CSS
+.toggle {
+    --color-base-h: 220;
+    --color-base-s: 55%;
+    --color-base-l: 55%;
+    --color-base-a: 1;
+}
 ```
 
 <div align="center">
 
 <br>
 
-<img alt="zen-toggle" src="./images/looks.webp" width="450" width="370">
+<img alt="zen-toggle" src="./images/looks.webp" width="460" width="380">
 
 </div>
 

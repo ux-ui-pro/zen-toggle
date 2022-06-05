@@ -1,8 +1,9 @@
-export default function helpers() {
-    const forFocus = document.querySelectorAll('.toggle input[type="checkbox"], .toggle input[type="radio"]')
+export default function toggleHelper() {
 
-    if (forFocus) {
-        forFocus.forEach((toggles) => {
+    const input = document.querySelectorAll('.toggle input[type="checkbox"], .toggle input[type="radio"]')
+
+    if (input) {
+        input.forEach((toggles) => {
 
             let el = toggles.parentElement
 

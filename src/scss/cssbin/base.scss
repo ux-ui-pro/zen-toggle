@@ -1,0 +1,46 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    .toggle {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+
+        input {
+            position: relative;
+            cursor: pointer;
+            appearance: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            pointer-events: auto;
+            height: 4rem;
+            min-height: 4rem;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                margin: auto;
+            }
+
+            &:not(.switch) {
+                width: 4rem;
+                min-width: 4rem;
+                border-radius: 5rem;
+
+                &::before {
+                    border: .2rem solid var(--color-base);
+                }
+
+                &:not(:checked) {
+                    &::before {
+                        border: .2rem solid hsla(var(--color-base-h, 220) 0% 50% / var(--color-base-a, 1));
+                    }
+                }
+            }
+        }
+    }
+}
+
+

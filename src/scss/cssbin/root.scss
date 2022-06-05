@@ -1,0 +1,17 @@
+.toggle {
+	--color-base: hsla(var(--color-base-h, 220) var(--color-base-s, 55%) var(--color-base-l, 55%) / var(--color-base-a, 1));
+	--highlight-checked: hsla(var(--color-base-h, 220) var(--color-base-s, 55%) var(--color-base-l, 55%) / .12);
+	--highlight-unchecked: hsla(var(--color-base-h, 220) 0% 50% / .12);
+	--color-disabled: hsla(var(--color-base-h, 220) 0% 78% / var(--color-base-a, 1));
+
+	--transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+	--transition-ripple: cubic-bezier(0.14, 0, 0, 1);
+
+	--font-size-label: 1.5rem;
+	--font-size-append: 1.2rem;
+	--font-color-label: Black;
+	--font-color-append: Gray;
+	--font-color-disabled: DarkGray;
+}
+
+

@@ -1,0 +1,61 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+	.toggle {
+		input {
+			&.switch {
+				width: 5.9rem;
+				min-width: 5.9rem;
+
+				&::before,
+				&::after {
+					background: hsla(var(--color-base-h, 220) var(--color-base-s, 55%) var(--color-base-l, 55%) / var(--color-base-a, 1));
+				}
+
+				&::before {
+					--color-base-s: 0%;
+					--color-base-l: 70%;
+					width: 3.3rem; height: 1.4rem;
+					border-radius: 5rem;
+				}
+
+				&::after {
+					--color-base-s: 0%;
+					--color-base-l: 55%;
+					width: 2rem; height: 2rem;
+					border-radius: 5rem;
+					transform: translateX(-1rem);
+					transition: background 90ms ease,
+					transform 90ms var(--transition-smooth),
+					box-shadow 90ms var(--transition-smooth);
+					will-change: background, transform, box-shadow;
+				}
+
+				&:checked {
+					&::before {
+						--color-base-s: inherit;
+						--color-base-l: 75%;
+					}
+
+					&::after {
+						--color-base-s: inherit;
+						--color-base-l: inherit;
+						transform: translateX(1rem);
+					}
+				}
+
+				&:disabled {
+					&::before {
+						--color-base-s: 0%;
+						--color-base-l: 90%;
+					}
+
+					&::after {
+						--color-base-s: 0%;
+						--color-base-l: 80%;
+					}
+				}
+			}
+		}
+	}
+}
+
+

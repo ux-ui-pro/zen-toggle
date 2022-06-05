@@ -1,0 +1,33 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+	.toggle {
+		&:focus input:not(.switch)::before,/** iOS **/
+		input:not(.switch):focus::before,
+		&:focus input.switch::after,/** iOS **/
+		input.switch:focus::after {
+			box-shadow: 0 0 0 1rem var(--highlight-unchecked);
+		}
+
+		&:focus input:not(.switch):checked::before,/** iOS **/
+		input:not(.switch):checked:focus::before,
+		&:focus input.switch:checked::after,/** iOS **/
+		input.switch:checked:focus::after {
+			box-shadow: 0 0 0 1rem var(--highlight-checked);
+		}
+
+		&--ripple {
+			input:not(.switch)::before,
+			input.switch::after {
+				animation: toggle-ripple-unchecked 225ms var(--transition-ripple) 1;
+				animation-play-state: running;
+			}
+
+			input:not(.switch):checked::before,
+			input.switch:checked::after {
+				animation: toggle-ripple-checked 225ms var(--transition-ripple) 1;
+				animation-play-state: running;
+			}
+		}
+	}
+}
+
+

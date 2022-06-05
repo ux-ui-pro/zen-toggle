@@ -1,0 +1,23 @@
+@keyframes toggle-ripple-unchecked {
+	from {
+		box-shadow: 0 0 0 1rem var(--highlight-unchecked),
+		0 0 0 .2rem var(--highlight-unchecked);
+	}
+	to {
+		box-shadow: 0 0 0 1rem var(--highlight-unchecked),
+		0 0 0 1rem var(--highlight-unchecked);
+	}
+}
+
+@keyframes toggle-ripple-checked {
+	from {
+		box-shadow: 0 0 0 1rem var(--highlight-checked),
+		0 0 0 .2rem var(--highlight-checked);
+	}
+	to {
+		box-shadow: 0 0 0 1rem var(--highlight-checked),
+		0 0 0 1rem var(--highlight-checked);
+	}
+}
+
+

@@ -1,0 +1,39 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+	.toggle {
+		input[type='radio'] {
+			&:not(.switch) {
+				&::before {
+					width: 2rem; height: 2rem;
+					border-radius: 5rem;
+				}
+
+				&::after {
+					width: 1rem; height: 1rem;
+					background: var(--color-base);
+					border-radius: 5rem;
+					transform: scale(0);
+					transition: transform 90ms var(--transition-smooth);
+					will-change: transform;
+				}
+
+				&:checked {
+					&::after {
+						transform: scale(1);
+					}
+				}
+
+				&:disabled {
+					&::before {
+						border-color: var(--color-disabled);
+					}
+
+					&::after {
+						background: var(--color-disabled);
+					}
+				}
+			}
+		}
+	}
+}
+
+

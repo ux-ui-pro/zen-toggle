@@ -1,0 +1,36 @@
+.toggle {
+	label {
+		position: relative;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: var(--font-size-label);
+		font-weight: 400;
+		line-height: 150%;
+		color: var(--font-color-label);
+		letter-spacing: .0178571429em;
+		padding: .1rem .5rem 0;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		user-select: none;
+		pointer-events: auto;
+
+		span + span {
+			font-size: var(--font-size-append);
+			line-height: 125%;
+			color: var(--font-color-append);
+		}
+	}
+
+	input:disabled + label,
+	&.toggle--disabled label {
+		pointer-events: none;
+		color: var(--font-color-disabled);
+
+		span + span {
+			color: var(--font-color-disabled);
+		}
+	}
+}
+
+
