@@ -17,9 +17,10 @@
 
 #### Hosting files
 ```HTML
-<link rel="stylesheet" href="path-to-the-file/zen-toggle.min.css">
-
-<script src="path-to-the-file/zen-toggle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zen-toggle/dist/css/zen-toggle.min.css">
+```
+```HTML
+<script src="https://cdn.jsdelivr.net/npm/zen-toggle/dist/js/zen-toggle.min.js"></script>
 ```
 
 #### SCSS
