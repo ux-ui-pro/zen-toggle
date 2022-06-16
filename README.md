@@ -8,19 +8,21 @@
 
 [![npm](https://img.shields.io/npm/v/zen-toggle.svg?colorB=brightgreen)](https://www.npmjs.com/package/zen-toggle)
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/zen-toggle.svg)](https://github.com/ux-ui-pro/zen-toggle)
+[![](https://data.jsdelivr.com/v1/package/npm/zen-toggle/badge?style=rounded)](https://www.jsdelivr.com/package/npm/zen-toggle)
 
 <p>
   <a href="https://ux-ui-pro.github.io/zen-toggle/dist/">Demo</a>
+  <a href="https://github.com/ux-ui-pro/zen-toggle/releases/latest">Download</a>
 </p>
 
 </div>
 
 #### Hosting files
 ```HTML
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zen-toggle/dist/css/zen-toggle.min.css">
+<link rel="stylesheet" href="path-to-the-file/zen-toggle.min.css">
 ```
 ```HTML
-<script src="https://cdn.jsdelivr.net/npm/zen-toggle/dist/js/zen-toggle.min.js"></script>
+<script src="path-to-the-file/zen-toggle.min.js"></script>
 ```
 
 #### SCSS
