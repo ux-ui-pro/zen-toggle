@@ -37,10 +37,10 @@ import toggleHelper from "zen-toggle"
 #### Set the base color (HSLA)
 ```CSS
 .toggle {
---color-base-h: 220;
---color-base-s: 55%;
---color-base-l: 55%;
---color-base-a: 1;
+    --color-base-h: 220;
+    --color-base-s: 55%;
+    --color-base-l: 55%;
+    --color-base-a: 1;
 }
 ```
 
