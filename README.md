@@ -11,8 +11,9 @@
 [![](https://data.jsdelivr.com/v1/package/npm/zen-toggle/badge?style=rounded)](https://www.jsdelivr.com/package/npm/zen-toggle)
 
 <p>
-  <a href="https://ux-ui-pro.github.io/zen-toggle/dist/">Demo</a>
-  <a href="https://github.com/ux-ui-pro/zen-toggle/releases/latest">Download</a>
+<a href="https://ux-ui-pro.github.io/zen-toggle/dist/">Demo</a>
+<br>
+<a href="https://github.com/ux-ui-pro/zen-toggle/releases/latest">Download</a>
 </p>
 
 </div>
@@ -38,10 +39,10 @@ import toggleHelper from "zen-toggle"
 #### Set the base color (HSLA)
 ```CSS
 .toggle {
-    --color-base-h: 220;
-    --color-base-s: 55%;
-    --color-base-l: 55%;
-    --color-base-a: 1;
+--color-base-h: 220;
+--color-base-s: 55%;
+--color-base-l: 55%;
+--color-base-a: 1;
 }
 ```
 
