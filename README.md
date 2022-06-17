@@ -43,9 +43,9 @@ import toggleHelper from "zen-toggle"
 	--toggle-color-a: 1;
 
 	--toggle-label-font-size: 15px;
-	--toggle-label-color: Black;
+	--toggle-label-font-color: Black;
 	--toggle-desc-font-size: 12px;
-	--toggle-desc-color: Gray;
+	--toggle-desc-font-color: Gray;
 }
 ```
 

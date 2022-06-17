@@ -5,11 +5,8 @@
   --color-disabled: hsla(var(--color-base-h, 220) 0% 78% / var(--color-base-a, 1));
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-ripple: cubic-bezier(0.14, 0, 0, 1);
-  --font-size-label: 1.5rem;
-  --font-size-append: 1.2rem;
-  --font-color-label: Black;
-  --font-color-append: Gray;
-  --font-color-disabled: DarkGray;
+  --toggle-label-font-size: 1.5rem;
+  --toggle-desc-font-size: 1.2rem;
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
@@ -78,10 +75,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: var(--font-size-label);
   font-weight: 400;
   line-height: 150%;
-  color: var(--font-color-label);
+  font-size: var(--toggle-label-font-size);
+  color: var(--toggle-label-font-color, Black);
   letter-spacing: 0.0178571429em;
   padding: .1rem .5rem 0;
   -moz-osx-font-smoothing: grayscale;
@@ -94,20 +91,20 @@
 }
 
 .toggle label span+span {
-  font-size: var(--font-size-append);
   line-height: 125%;
-  color: var(--font-color-append);
+  font-size: var(--toggle-desc-font-size);
+  color: var(--toggle-desc-font-color, Gray);
 }
 
 .toggle input:disabled+label,
 .toggle.toggle--disabled label {
   pointer-events: none;
-  color: var(--font-color-disabled);
+  color: var(--toggle-disabled-font-color, Silver);
 }
 
 .toggle input:disabled+label span+span,
 .toggle.toggle--disabled label span+span {
-  color: var(--font-color-disabled);
+  color: var(--toggle-disabled-font-color, Silver);
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
