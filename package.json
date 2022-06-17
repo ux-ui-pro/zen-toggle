@@ -1,6 +1,6 @@
 {
   "name": "zen-toggle",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "description": "Checkbox, radio, switch, material",
   "author": "ux-ui.pro",
   "license": "MIT",
@@ -55,7 +55,6 @@
     "toggle",
     "kit",
     "material design",
-    "ripple",
     "ui",
     "css",
     "scss",
