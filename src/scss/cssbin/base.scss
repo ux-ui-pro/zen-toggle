@@ -13,8 +13,8 @@
             -webkit-tap-highlight-color: transparent;
             -webkit-user-select: none;
             pointer-events: auto;
-            height: 4rem;
-            min-height: 4rem;
+            height: 40px;
+            min-height: 40px;
 
             &::before,
             &::after {
@@ -25,17 +25,17 @@
             }
 
             &:not(.switch) {
-                width: 4rem;
-                min-width: 4rem;
-                border-radius: 5rem;
+                width: 40px;
+                min-width: 40px;
+                border-radius: 50px;
 
                 &::before {
-                    border: .2rem solid var(--color-base);
+                    border: 2px solid var(--color-base);
                 }
 
                 &:not(:checked) {
                     &::before {
-                        border: .2rem solid hsla(var(--color-base-h, 220) 0% 50% / var(--color-base-a, 1));
+                        border: 2px solid hsla(var(--color-base-h, 220) 0% 50% / var(--color-base-a, 1));
                     }
                 }
             }

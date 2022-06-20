@@ -3,14 +3,14 @@
 		input[type='radio'] {
 			&:not(.switch) {
 				&::before {
-					width: 2rem; height: 2rem;
-					border-radius: 5rem;
+					width: 20px; height: 20px;
+					border-radius: 50px;
 				}
 
 				&::after {
-					width: 1rem; height: 1rem;
+					width: 10px; height: 10px;
 					background: var(--color-base);
-					border-radius: 5rem;
+					border-radius: 50px;
 					transform: scale(0);
 					transition: transform 90ms var(--transition-smooth);
 					will-change: transform;

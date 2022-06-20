@@ -4,14 +4,14 @@
 		input:not(.switch):focus::before,
 		&:focus input.switch::after,/** iOS **/
 		input.switch:focus::after {
-			box-shadow: 0 0 0 1rem var(--highlight-unchecked);
+			box-shadow: 0 0 0 10px var(--highlight-unchecked);
 		}
 
 		&:focus input:not(.switch):checked::before,/** iOS **/
 		input:not(.switch):checked:focus::before,
 		&:focus input.switch:checked::after,/** iOS **/
 		input.switch:checked:focus::after {
-			box-shadow: 0 0 0 1rem var(--highlight-checked);
+			box-shadow: 0 0 0 10px var(--highlight-checked);
 		}
 
 		&--ripple {

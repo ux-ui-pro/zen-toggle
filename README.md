@@ -42,8 +42,8 @@ import toggleHelper from "zen-toggle"
 	--toggle-color-l: 55%;
 	--toggle-color-a: 1;
 
-	--toggle-label-font-size: 1.5rem;
-	--toggle-desc-font-size: 1.2rem;
+	--toggle-label-font-size: 15px;
+	--toggle-desc-font-size: 12px;
 	--toggle-label-font-color: Black;
 	--toggle-desc-font-color: Gray;
 	--toggle-disabled-font-color: Silver;
