@@ -25,7 +25,7 @@
 					transform: translateX(-10px);
 					transition: background 90ms ease,
 					transform 90ms var(--transition-smooth),
-					box-shadow 90ms var(--transition-smooth);
+					box-shadow 325ms var(--transition-smooth);
 					will-change: background, transform, box-shadow;
 				}
 

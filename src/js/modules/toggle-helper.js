@@ -1,27 +1,26 @@
 export default function toggleHelper() {
 
-    const input = document.querySelectorAll('.toggle input[type="checkbox"], .toggle input[type="radio"]')
+    const inputs = document.querySelectorAll('.toggle input[type="checkbox"], .toggle input[type="radio"]')
 
-    if (input) {
-        input.forEach((toggles) => {
+    if (inputs) {
 
-            let el = toggles.parentElement
+        inputs.forEach(input => {
 
-            if(toggles.disabled) {
-                el.classList.add('toggle--disabled')
+            let e = input.parentElement
+
+            if(input.disabled) {
+                e.classList.add('toggle--disabled')
             }
 
-            el.setAttribute('tabindex', '-1')
+            e.setAttribute('tabindex', '-1') // fix for Safari
 
-            toggles.addEventListener('click', function () {
-                el.classList.add('toggle--ripple')
-
-                setTimeout(() => {
-                    el.classList.remove('toggle--ripple')
-                }, 325)
+            input.addEventListener('click', () => {
+                e.classList.add('toggle--ripple')
+                setTimeout(() => e.classList.remove('toggle--ripple'), 325)
             })
 
         })
+
     }
 }
 
