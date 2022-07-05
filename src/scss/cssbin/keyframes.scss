@@ -1,22 +1,22 @@
 @keyframes toggle-ripple-unchecked {
 	from {
-		box-shadow: 0 0 0 10px var(--highlight-unchecked),
-		0 0 0 2px var(--highlight-unchecked);
+		box-shadow: 0 0 0 0 var(--highlight-unchecked);
 	}
+
 	to {
 		box-shadow: 0 0 0 10px var(--highlight-unchecked),
-		0 0 0 10px var(--highlight-unchecked);
+					0 0 0 10px var(--highlight-unchecked);
 	}
 }
 
 @keyframes toggle-ripple-checked {
 	from {
-		box-shadow: 0 0 0 10px var(--highlight-checked),
-		0 0 0 2px var(--highlight-checked);
+		box-shadow: 0 0 0 0 var(--highlight-checked);
 	}
+
 	to {
 		box-shadow: 0 0 0 10px var(--highlight-checked),
-		0 0 0 10px var(--highlight-checked);
+					0 0 0 10px var(--highlight-checked);
 	}
 }
 

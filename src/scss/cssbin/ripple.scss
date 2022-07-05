@@ -17,13 +17,13 @@
 		&--ripple {
 			input:not(.switch)::before,
 			input.switch::after {
-				animation: toggle-ripple-unchecked 225ms var(--transition-ripple) 1;
+				animation: toggle-ripple-unchecked 325ms var(--transition-ripple) 1;
 				animation-play-state: running;
 			}
 
 			input:not(.switch):checked::before,
 			input.switch:checked::after {
-				animation: toggle-ripple-checked 225ms var(--transition-ripple) 1;
+				animation: toggle-ripple-checked 325ms var(--transition-ripple) 1;
 				animation-play-state: running;
 			}
 		}

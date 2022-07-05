@@ -18,7 +18,7 @@ export default function toggleHelper() {
 
                 setTimeout(() => {
                     el.classList.remove('toggle--ripple')
-                }, 225)
+                }, 325)
             })
 
         })
