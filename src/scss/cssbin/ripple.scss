@@ -1,30 +1,32 @@
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
 	.toggle {
-		&:focus input:not(.switch)::before,/** iOS **/
-		input:not(.switch):focus::before,
-		&:focus input.switch::after,/** iOS **/
-		input.switch:focus::after {
-			box-shadow: 0 0 0 10px var(--highlight-unchecked);
+		&--ripple {/* fix for iOS */
+			&:focus input {
+				&:checked {
+					&::before {
+						animation: ripple-checked 600ms var(--transition-ripple);
+					}
+				}
+
+				&:not(:checked) {
+					&::before {
+						animation: ripple-unchecked 600ms var(--transition-ripple);
+					}
+				}
+			}
 		}
 
-		&:focus input:not(.switch):checked::before,/** iOS **/
-		input:not(.switch):checked:focus::before,
-		&:focus input.switch:checked::after,/** iOS **/
-		input.switch:checked:focus::after {
-			box-shadow: 0 0 0 10px var(--highlight-checked);
-		}
-
-		&--ripple {
-			input:not(.switch)::before,
-			input.switch::after {
-				animation: toggle-ripple-unchecked 325ms var(--transition-ripple) 1;
-				animation-play-state: running;
+		input:focus {
+			&:checked {
+				&::before {
+					animation: ripple-checked 600ms var(--transition-ripple);
+				}
 			}
 
-			input:not(.switch):checked::before,
-			input.switch:checked::after {
-				animation: toggle-ripple-checked 325ms var(--transition-ripple) 1;
-				animation-play-state: running;
+			&:not(:checked) {
+				&::before {
+					animation: ripple-unchecked 600ms var(--transition-ripple);
+				}
 			}
 		}
 	}

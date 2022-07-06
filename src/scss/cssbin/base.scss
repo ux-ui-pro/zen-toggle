@@ -3,18 +3,21 @@
         position: relative;
         display: inline-flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 0 25px;
+        width: 100%;
+        padding: 2px 0;
         pointer-events: none;
 
         input {
             position: relative;
+            margin: 0 -11px;
+            height: 40px;
+            min-height: 40px;
             cursor: pointer;
             appearance: none;
             -webkit-tap-highlight-color: transparent;
             -webkit-user-select: none;
             pointer-events: auto;
-            height: 40px;
-            min-height: 40px;
 
             &::before,
             &::after {
@@ -27,14 +30,13 @@
             &:not(.switch) {
                 width: 40px;
                 min-width: 40px;
-                border-radius: 50px;
 
-                &::before {
+                &::after {
                     border: 2px solid var(--color-base);
                 }
 
                 &:not(:checked) {
-                    &::before {
+                    &::after {
                         border: 2px solid hsla(var(--color-base-h, 220) 0% 50% / var(--color-base-a, 1));
                     }
                 }

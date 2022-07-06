@@ -6,17 +6,16 @@ export default function toggleHelper() {
 
         inputs.forEach(input => {
 
-            let e = input.parentElement
+            const e = input.parentElement,
+                  UA = navigator.userAgent
 
-            if(input.disabled) {
-                e.classList.add('toggle--disabled')
+            if (/iPad|iPhone|iPod/.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+                e.setAttribute('tabindex', '-1') // fix for iOS
             }
 
-            e.setAttribute('tabindex', '-1') // fix for Safari
-
             input.addEventListener('click', () => {
+                e.classList.remove('toggle--ripple')
                 e.classList.add('toggle--ripple')
-                setTimeout(() => e.classList.remove('toggle--ripple'), 325)
             })
 
         })

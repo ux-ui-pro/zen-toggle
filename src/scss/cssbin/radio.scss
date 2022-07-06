@@ -2,36 +2,28 @@
 	.toggle {
 		input[type='radio'] {
 			&:not(.switch) {
-				&::before {
-					width: 20px; height: 20px;
-					border-radius: 50px;
-				}
 
 				&::after {
-					width: 10px; height: 10px;
-					background: var(--color-base);
-					border-radius: 50px;
-					transform: scale(0);
-					transition: transform 90ms var(--transition-smooth);
-					will-change: transform;
+					width: 20px; height: 20px;
+					border-radius: 50%;
 				}
 
 				&:checked {
 					&::after {
-						transform: scale(1);
+						background: radial-gradient(circle closest-side, var(--color-base) 5px, transparent 5.35px);
 					}
 				}
 
 				&:disabled {
-					&::before {
+					&::after {
 						border-color: var(--color-disabled);
 					}
 
-					&::after {
-						background: var(--color-disabled);
+					&:checked {
+						&::after {
+							background: radial-gradient(circle closest-side, var(--color-disabled) 5px, transparent 5.35px);
+						}
 					}
-
-					background: transparent;
 				}
 			}
 		}

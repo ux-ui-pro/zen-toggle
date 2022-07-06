@@ -4,26 +4,36 @@
 		display: inline-flex;
 		flex-direction: column;
 		justify-content: center;
+		overflow: hidden;
+		max-width: 100%;
 		font-weight: 400;
 		line-height: 150%;
-		font-size: var(--toggle-label-font-size);
+		font-size: var(--toggle-label-font-size, 15px);
 		color: var(--toggle-label-font-color, Black);
 		letter-spacing: .0178571429em;
-		padding: 1px 5px 0;
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 		user-select: none;
 		pointer-events: auto;
 
+		span {
+			padding: 1px 0;
+		}
+
+		span:first-child {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
 		span + span {
 			line-height: 125%;
-			font-size: var(--toggle-desc-font-size);
+			font-size: var(--toggle-desc-font-size, 12px);
 			color: var(--toggle-desc-font-color, Gray);
 		}
 	}
 
-	input:disabled + label,
-	&.toggle--disabled label {
+	input:disabled + label {
 		pointer-events: none;
 		color: var(--toggle-disabled-font-color, Silver);
 
