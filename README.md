@@ -5,32 +5,31 @@
 <img alt="zen-toggle" src="./images/logo.svg" width="60">
 
 <h1>zen-toggle</h1>
-<sup>2.5Kb gzipped</sup>
-<br>
 
 [![npm](https://img.shields.io/npm/v/zen-toggle.svg?colorB=brightgreen)](https://www.npmjs.com/package/zen-toggle)
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/zen-toggle.svg)](https://github.com/ux-ui-pro/zen-toggle)
 [![](https://data.jsdelivr.com/v1/package/npm/zen-toggle/badge?style=rounded)](https://www.jsdelivr.com/package/npm/zen-toggle)
 
 <h3><a href="https://ux-ui-pro.github.io/zen-toggle/dist/">Demo</a></h3>
+<sub>2.5Kb gzipped</sub>
 
 </div>
 <br>
 
 ### SCSS
-<sub>Import files if your bundler supports SCSS.</sub>
+<sup>Import files if your bundler supports SCSS.</sup>
 ```SCSS
 @import "node_modules/zen-toggle/src/scss/zen-toggle";
 ```
 
 ### JS
-<sub>Optional. It is necessary for the correct operation of focus and ripple effects on iOS devices.</sub>
+<sup>Optional. It is necessary for the correct operation of focus and ripple effects on iOS devices.</sup>
 ```javascript
 import toggleHelper from "zen-toggle"
 ```
 
 ### Hosting files
-<sub>You can download the zen-toggle package from the <a href="https://github.com/ux-ui-pro/zen-toggle/releases/latest">following link</a>.</sub>
+<sup>You can download the zen-toggle package from the <a href="https://github.com/ux-ui-pro/zen-toggle/releases/latest">following link</a>.</sup>
 ```HTML
 <link rel="stylesheet" href="path-to-the-file/zen-toggle.min.css">
 ```
@@ -39,7 +38,7 @@ import toggleHelper from "zen-toggle"
 ```
 
 ### Set the base color (HSLA)
-<sub>Build your checkbox, <a href="https://ux-ui-pro.github.io/zen-toggle/dist/">more examples</a>.</sub>
+<sup>Build your checkbox. <a href="https://ux-ui-pro.github.io/zen-toggle/dist/">More examples</a>.</sup>
 ```CSS
 .toggle {
     --toggle-color-h: 220;
@@ -66,4 +65,4 @@ import toggleHelper from "zen-toggle"
 <br>
 
 ### License
-zen-toggle is released under MIT license
+<sup>zen-toggle is released under MIT license.</sup>
