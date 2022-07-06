@@ -5,6 +5,8 @@
 <img alt="zen-toggle" src="./images/logo.svg" width="60">
 
 <h1>zen-toggle</h1>
+<sup>2.5Kb gzipped</sup>
+<br>
 
 [![npm](https://img.shields.io/npm/v/zen-toggle.svg?colorB=brightgreen)](https://www.npmjs.com/package/zen-toggle)
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/zen-toggle.svg)](https://github.com/ux-ui-pro/zen-toggle)
@@ -16,19 +18,19 @@
 <br>
 
 ### SCSS
-<sub>Import files if your bundler supports SCSS</sub>
+<sub>Import files if your bundler supports SCSS.</sub>
 ```SCSS
 @import "node_modules/zen-toggle/src/scss/zen-toggle";
 ```
 
 ### JS
-<sub>Optional. It is necessary for the correct operation of focus and ripple effects on iOS devices</sub>
+<sub>Optional. It is necessary for the correct operation of focus and ripple effects on iOS devices.</sub>
 ```javascript
 import toggleHelper from "zen-toggle"
 ```
 
 ### Hosting files
-<sub>You can download the zen-toggle package from the [following link](https://github.com/ux-ui-pro/zen-toggle/releases/latest) </sub>
+<sub>You can download the zen-toggle package from the <a href="https://github.com/ux-ui-pro/zen-toggle/releases/latest">following link</a>.</sub>
 ```HTML
 <link rel="stylesheet" href="path-to-the-file/zen-toggle.min.css">
 ```
@@ -37,6 +39,7 @@ import toggleHelper from "zen-toggle"
 ```
 
 ### Set the base color (HSLA)
+<sub>Build your checkbox, <a href="https://ux-ui-pro.github.io/zen-toggle/dist/">more examples</a>.</sub>
 ```CSS
 .toggle {
     --toggle-color-h: 220;
@@ -51,15 +54,16 @@ import toggleHelper from "zen-toggle"
     --toggle-disabled-font-color: Silver;
 }
 ```
-
-<div align="center">
-
-<br>
-
-<img alt="zen-toggle" src="./images/looks.webp" width="460" width="380">
-
+```HTML
+<div class="toggle">
+    <input id="ch" type="checkbox">
+    <label for="ch">
+        <span>Checkbox</span>
+    </label>
 </div>
+```
+
 <br>
 
-## License
+### License
 zen-toggle is released under MIT license
