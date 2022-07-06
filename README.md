@@ -20,14 +20,12 @@
 ```SCSS
 @import "node_modules/zen-toggle/src/scss/zen-toggle";
 ```
-<br>
 
 ### JS
 <sub>Optional. It is necessary for the correct operation of focus and ripple effects on iOS devices</sub>
 ```javascript
 import toggleHelper from "zen-toggle"
 ```
-<br>
 
 ### Hosting files
 <sub>You can download the zen-toggle package from the [following link](https://github.com/ux-ui-pro/zen-toggle/releases/latest) </sub>
@@ -37,7 +35,6 @@ import toggleHelper from "zen-toggle"
 ```HTML
 <script src="path-to-the-file/zen-toggle.min.js"></script>
 ```
-<br>
 
 ### Set the base color (HSLA)
 ```CSS
@@ -54,7 +51,6 @@ import toggleHelper from "zen-toggle"
     --toggle-disabled-font-color: Silver;
 }
 ```
-<br>
 
 <div align="center">
 
@@ -63,6 +59,7 @@ import toggleHelper from "zen-toggle"
 <img alt="zen-toggle" src="./images/looks.webp" width="460" width="380">
 
 </div>
+<br>
 
 ## License
 zen-toggle is released under MIT license
