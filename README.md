@@ -26,7 +26,7 @@
 ### JS
 <sup>Optional. It is necessary for the correct operation of focus and ripple effects on iOS devices.</sup>
 ```javascript
-import ToggleHelper from "zen-toggle"
+import { ToggleHelper } from "zen-toggle"
 ```
 <br>
 
