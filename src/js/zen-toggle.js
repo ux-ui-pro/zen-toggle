@@ -1,5 +1,5 @@
-import toggleHelper from "./modules/toggle-helper.js"
+import { ToggleHelper } from './modules/toggle-helper.js'
 
-toggleHelper()
+ToggleHelper()
 
 
