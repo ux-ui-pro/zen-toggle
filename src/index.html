@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>zen-toggle</title>
+	<meta name="robots" content="none">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<style type="text/css">
+        html {
+            font-family: system-ui, -apple-system, "Open Sans", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-feature-settings: "kern" 1,"liga" 0;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1;
+	        --c-cells: hsl(0 0% 96%);
+	        padding: 20px;
+	        background-image: -o-linear-gradient(45deg,var(--c-cells) 25%,transparent 25%),-o-linear-gradient(135deg,var(--c-cells) 25%,transparent 25%),-o-linear-gradient(45deg,transparent 75%,var(--c-cells) 75%),-o-linear-gradient(135deg,transparent 75%,var(--c-cells) 75%);
+	        background-image: linear-gradient(45deg,var(--c-cells) 25%,transparent 25%),linear-gradient(-45deg,var(--c-cells) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--c-cells) 75%),linear-gradient(-45deg,transparent 75%,var(--c-cells) 75%);
+	        background-size: 2rem 2rem;
+	        background-position: 0 0,0 1rem,1rem -1rem,-1rem 0;
+        }
+
+        * {
+            outline: none;
+            text-size-adjust: none;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        html,
+        body,
+        input,
+        textarea,
+        button {
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        .layout {
+            max-width: 160rem;
+            margin: 0 auto;
+            padding: 5rem 1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0; padding: 30px;
+			border: 2px solid lavender;
+        }
+
+		.main {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+			gap: 70px 30px;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.toggle--rtl {
+			justify-content: flex-end;
+		}
+
+		.toggle--rtlb {
+			justify-content: space-between;
+		}
+
+		.toggle--rtl input,
+		.toggle--rtlb input {
+			order: 2;
+		}
+
+		.toggle--rtlb label,
+		.toggle--rtl label {
+			order: 1;
+		}
+	</style>
+	<link rel="stylesheet" href="css/zen-toggle.min.css">
+</head>
+<body>
+<div class="layout">
+	<main role="main" class="main">
+		<ul>
+			<li>
+				<div class="toggle">
+					<input id="q1" type="checkbox">
+					<label for="q1">
+						<span>Checkbox</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="q2" type="checkbox" checked>
+					<label for="q2">
+						<span>Checkbox adipisci aliquid amet animi aperiam aut consectetur adipisicing</span>
+						<span>Append text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid amet animi aperiam aut.</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="q3" type="radio" name="qw" value="1">
+					<label for="q3">
+						<span>Radio</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="q4" type="radio" name="qw" value="1" checked>
+					<label for="q4">
+						<span>Radio</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="q5" type="checkbox" class="switch">
+					<label for="q5">
+						<span>Switch checkbox adipisci aliquid amet animi aperiam aut consectetur adipisicing</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="q6" type="checkbox" class="switch" checked>
+					<label for="q6">
+						<span>Switch checkbox</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="q7" type="radio" name="er" value="2" class="switch">
+					<label for="q7">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="q8" type="radio" name="er" value="2" class="switch" checked>
+					<label for="q8">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+		</ul>
+
+		<ul>
+			<li>
+				<div class="toggle">
+					<input id="w1" type="checkbox" disabled>
+					<label for="w1">Checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="w2" type="checkbox" checked disabled>
+					<label for="w2">
+						<span>Checkbox</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="w3" type="radio" name="ty" value="3" disabled>
+					<label for="w3">Radio</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="w4" type="radio" name="ty" value="3" checked disabled>
+					<label for="w4">Radio</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="w5" type="checkbox" class="switch" disabled>
+					<label for="w5">Switch checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="w6" type="checkbox" class="switch" checked disabled>
+					<label for="w6">Switch checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="w7" type="radio" name="ui" value="4" class="switch" disabled>
+					<label for="w7">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle">
+					<input id="w8" type="radio" name="ui" value="4" class="switch" checked disabled>
+					<label for="w8">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+		</ul>
+
+		<ul>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e1" type="checkbox">
+					<label for="e1">Checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e2" type="checkbox" checked>
+					<label for="e2">
+						<span>Checkbox</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e3" type="radio" name="op" value="3">
+					<label for="e3">Radio</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e4" type="radio" name="op" value="3" checked>
+					<label for="e4">Radio</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e5" type="checkbox" class="switch">
+					<label for="e5">Switch checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e6" type="checkbox" class="switch" checked>
+					<label for="e6">Switch checkbox</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e7" type="radio" name="as" value="4" class="switch">
+					<label for="e7">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtlb">
+					<input id="e8" type="radio" name="as" value="4" class="switch" checked>
+					<label for="e8">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+		</ul>
+
+		<ul>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r1" type="checkbox">
+					<label for="r1">
+						<span>Checkbox</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r2" type="checkbox" checked>
+					<label for="r2">
+						<span>Checkbox adipisci aliquid amet animi aperiam aut consectetur adipisicing</span>
+						<span>Append text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid amet animi aperiam aut.</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r3" type="radio" name="df" value="1">
+					<label for="r3">
+						<span>Radio</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r4" type="radio" name="df" value="1" checked>
+					<label for="r4">
+						<span>Radio</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r5" type="checkbox" class="switch">
+					<label for="r5">
+						<span>Switch checkbox adipisci aliquid amet animi aperiam aut consectetur adipisicing</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r6" type="checkbox" class="switch" checked>
+					<label for="r6">
+						<span>Switch checkbox</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r7" type="radio" name="gh" value="2" class="switch">
+					<label for="r7">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="toggle toggle--rtl">
+					<input id="r8" type="radio" name="gh" value="2" class="switch" checked>
+					<label for="r8">
+						<span>Switch radio</span>
+						<span>Append text</span>
+					</label>
+				</div>
+			</li>
+		</ul>
+	</main>
+</div>
+<script src="js/zen-toggle.min.js"></script>
+</body>
+</html>

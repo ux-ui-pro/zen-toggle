@@ -1,0 +1,33 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+	.toggle {
+		input[type='radio'] {
+			&:not(.switch) {
+
+				&::after {
+					width: 20px; height: 20px;
+					border-radius: 50%;
+				}
+
+				&:checked {
+					&::after {
+						background: radial-gradient(circle closest-side, var(--color-base) 5px, transparent 5.35px);
+					}
+				}
+
+				&:disabled {
+					&::after {
+						border-color: var(--color-disabled);
+					}
+
+					&:checked {
+						&::after {
+							background: radial-gradient(circle closest-side, var(--color-disabled) 5px, transparent 5.35px);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

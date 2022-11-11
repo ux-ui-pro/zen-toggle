@@ -1,0 +1,24 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+	.toggle:not(:active) {
+		input {
+			background: none;
+
+			&::before {
+				width: 18px; height: 18px;
+				border-radius: 100%;
+			}
+		}
+
+		&:focus input::before, /* for iOS */
+		input:focus::before {
+			box-shadow: 0 0 0 12px var(--highlight-unchecked);
+		}
+
+		&:focus input:checked::before, /* for iOS */
+		input:checked:focus::before {
+			box-shadow: 0 0 0 12px var(--highlight-checked);
+		}
+	}
+}
+
+

@@ -1,0 +1,35 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+	.toggle {
+		&--ripple {/* fix for iOS */
+			&:focus input {
+				&:checked:not(:active) {
+					&::before {
+						animation: ripple-checked var(--duration-ripple) var(--transition-ripple);
+					}
+				}
+
+				&:not(:checked):not(:active) {
+					&::before {
+						animation: ripple-unchecked var(--duration-ripple) var(--transition-ripple);
+					}
+				}
+			}
+		}
+
+		input:focus {
+			&:checked:not(:active) {
+				&::before {
+					animation: ripple-checked var(--duration-ripple) var(--transition-ripple);
+				}
+			}
+
+			&:not(:checked):not(:active) {
+				&::before {
+					animation: ripple-unchecked var(--duration-ripple) var(--transition-ripple);
+				}
+			}
+		}
+	}
+}
+
+

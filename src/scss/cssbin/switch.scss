@@ -1,0 +1,60 @@
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+	.toggle {
+		input {
+			&.switch {
+				width: 59px;
+				min-width: 59px;
+
+				&::before,
+				&::after {
+					background: hsla(var(--color-base-h, 220) var(--color-base-s, 55%) var(--color-base-l, 55%) / var(--color-base-a, 1));
+				}
+
+				&::after {
+					--color-base-s: 0%;
+					--color-base-l: 70%;
+					width: 33px; height: 14px;
+					border-radius: 14px;
+				}
+
+				&::before {
+					--color-base-s: 0%;
+					--color-base-l: 55%;
+					z-index: 1;
+					width: 20px; height: 20px;
+					border-radius: 100%;
+					transform: translateX(-10px);
+					transition: background 90ms ease, transform 90ms var(--transition-smooth);
+					will-change: background, transform;
+				}
+
+				&:checked {
+					&::after {
+						--color-base-s: inherit;
+						--color-base-l: 75%;
+					}
+
+					&::before {
+						--color-base-s: inherit;
+						--color-base-l: inherit;
+						transform: translateX(10px);
+					}
+				}
+
+				&:disabled {
+					&::after {
+						--color-base-s: 0%;
+						--color-base-l: 90%;
+					}
+
+					&::before {
+						--color-base-s: 0%;
+						--color-base-l: 80%;
+					}
+				}
+			}
+		}
+	}
+}
+
+

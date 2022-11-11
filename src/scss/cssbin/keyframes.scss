@@ -1,0 +1,25 @@
+@keyframes ripple-checked {
+	0% {
+		box-shadow:	0 0 0 0 var(--color-base),
+					0 0 0 0 var(--highlight-checked);
+	}
+
+	100% {
+		box-shadow:	0 0 0 12px transparent,
+					0 0 0 12px var(--highlight-checked);
+	}
+}
+
+@keyframes ripple-unchecked {
+	0% {
+		box-shadow:	0 0 0 0 hsla(0 0% 60% / 1),
+					0 0 0 0 var(--highlight-unchecked);
+	}
+
+	100% {
+		box-shadow:	0 0 0 12px transparent,
+					0 0 0 12px var(--highlight-unchecked);
+	}
+}
+
+

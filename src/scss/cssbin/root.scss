@@ -1,0 +1,13 @@
+.toggle {
+	--color-base: hsla(var(--color-base-h, 220) var(--color-base-s, 55%) var(--color-base-l, 55%) / var(--color-base-a, 1));
+	--color-disabled: hsla(var(--color-base-h, 220) 0% 78% / var(--color-base-a, 1));
+
+	--highlight-checked: hsla(var(--color-base-h, 220) var(--color-base-s, 55%) var(--color-base-l, 55%) / .16);
+	--highlight-unchecked: hsla(var(--color-base-h, 220) 0% 50% / .16);
+
+	--transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+	--transition-ripple: cubic-bezier(0.165, 0.84, 0.44, 1);
+	--duration-ripple: 275ms;
+}
+
+
