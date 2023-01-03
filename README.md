@@ -32,16 +32,11 @@ import { ZenToggle } from 'zen-toggle'
 
 ### Hosting files
 <sup>You can download the zen-toggle package from the <a href="https://github.com/ux-ui-pro/zen-toggle/releases/latest">following link</a>.</sup>
-```HTML
-<link rel="stylesheet" href="path-to-the-file/zen-toggle.min.css">
-```
-```HTML
-<script src="path-to-the-file/zen-toggle.min.js"></script>
-```
+
 <br>
 
 ### Set the base color (HSLA)
-<sup>Build your checkbox. <a href="https://ux-ui-pro.github.io/zen-toggle/dist/">More examples</a>.</sup>
+<sup><a href="https://ux-ui-pro.github.io/zen-toggle/dist/">More examples</a>.</sup>
 ```CSS
 .toggle {
     --toggle-color-h: 220;

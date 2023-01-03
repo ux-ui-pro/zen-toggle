@@ -1,4 +1,4 @@
-export function ZenToggle() {
+const ZenToggle = () => {
     let inputs = document.querySelectorAll('.toggle input[type="checkbox"], .toggle input[type="radio"]')
 
     for (let input of inputs) {
@@ -16,4 +16,8 @@ export function ZenToggle() {
             })
         }
     }
+}
+
+export {
+    ZenToggle
 }

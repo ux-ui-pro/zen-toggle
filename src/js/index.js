@@ -1,4 +1,4 @@
-import { ZenToggle } from './modules/zen-toggle.js'
+import { ZenToggle } from './zen-toggle.js'
 
 ZenToggle()
 
